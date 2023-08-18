@@ -54,8 +54,8 @@
 :root {
     --tg-body-font-family: 'Poppins', sans-serif;
     --tg-heading-font-family: 'Poppins', sans-serif;
-    --tg-primary-color: #00bbfa;
-    --tg-secondary-color: #F89E52;
+    --tg-primary-color: #d61738;
+    --tg-secondary-color: #d6173781;
     --tg-body-font-color: #666666;
     --tg-heading-font-color: #0B0B0B;
     --tg-banner-title-color: #2A2A2A;
@@ -1481,7 +1481,7 @@ label {
 	color: var(--tg-white);
 }
 .banner-content-two .title span {
-	color: var(--tg-purple);
+	color: var(--tg-yellow-two);
 }
 .banner-content-two .banner-content-bottom {
 	display: flex;
@@ -2150,7 +2150,7 @@ label {
 /* about-two */
 .about-area-two {
 	position: relative;
-	padding: 120px 0 205px;
+	padding: 120px 0;
 }
 .section-title.title-style-two .title {
 	font-size: 55px;
