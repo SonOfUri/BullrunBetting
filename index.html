@@ -362,7 +362,7 @@
                                 <span class="sub-title">Bullrun Betting</span>
                                 <h2 class="title" style="color: #fff;">FIRST RACE STARTS IN</h2>
                             </div>
-                            <h1 style="color: #fff;" class="info-one" id="timer">00:00:00</h1>
+                            <h1 style="color: #fff;" class="info-one" id="timer">Calculating...</h1>
 
                             <a href="#" class="btn">Bet Here <span></span></a>
                         </div>
@@ -473,31 +473,31 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="project-item">
-                                            <a href="#"><img src="assets/img/images/01.jpg" alt=""></a>
+                                            <a href="#"><img src="assets/img/images/01.png" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="project-item">
-                                            <a href="#" class="popup-image"><img src="assets/img/images/04.jpg"
+                                            <a href="#" class="popup-image"><img src="assets/img/images/04.png"
                                                     alt=""></a>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="project-item">
-                                            <a href="#" class="popup-image"><img src="assets/img/images/02.jpg"
+                                            <a href="#" class="popup-image"><img src="assets/img/images/02.png"
                                                     alt=""></a>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="project-item">
-                                            <a href="#"><img src="assets/img/images/05.jpg" alt=""></a>
+                                            <a href="#"><img src="assets/img/images/05.png" alt=""></a>
                                         </div>
                                     </div>
 
 
                                     <div class="swiper-slide">
                                         <div class="project-item">
-                                            <a href="#"><img src="assets/img/images/03.jpg" alt=""></a>
+                                            <a href="#"><img src="assets/img/images/03.png" alt=""></a>
                                         </div>
                                     </div>
 
@@ -628,25 +628,29 @@
     <!-- JS here -->
 
     <script>
-        // Set the target countdown date and time
-        const targetDate = new Date("2023-12-31T23:59:59").getTime();
+   // Calculate the target date and time which is 3 days from now
+const now = new Date();
+const targetDate = new Date(now.getTime() + (3 * 24 * 60 * 60 * 1000)); // 3 days * 24 hours * 60 minutes * 60 seconds * 1000 milliseconds
 
-        // Update the countdown every second
-        const countdownInterval = setInterval(() => {
-            const now = new Date().getTime();
-            const timeRemaining = targetDate - now;
+// Update the countdown every second
+const countdownInterval = setInterval(() => {
+  const currentTime = new Date().getTime();
+  const timeRemaining = targetDate - currentTime;
 
-            if (timeRemaining > 0) {
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  if (timeRemaining > 0) {
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-                document.getElementById("timer").textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            } else {
-                document.getElementById("timer").textContent = "Timer Expired!";
-                clearInterval(countdownInterval);
-            }
-        }, 1000);
+    document.getElementById("timer").textContent =  `${days}d : ${hours.toString().padStart(2, '0')}h : ${minutes.toString().padStart(2, '0')}m : ${seconds.toString().padStart(2, '0')}s`;
+  } else {
+    document.getElementById("timer").textContent = "Timer Expired!";
+    clearInterval(countdownInterval);
+  }
+}, 1000);
+
+
     </script>
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
