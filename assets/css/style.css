@@ -54,8 +54,9 @@
 :root {
     --tg-body-font-family: 'Poppins', sans-serif;
     --tg-heading-font-family: 'Poppins', sans-serif;
-    --tg-primary-color: #d61738;
-    --tg-secondary-color: #d6173781;
+    /* --tg-primary-color: #d61738; */
+    --tg-primary-color: pink;
+    --tg-secondary-color: pink;
     --tg-body-font-color: #666666;
     --tg-heading-font-color: #0B0B0B;
     --tg-banner-title-color: #2A2A2A;
@@ -84,7 +85,7 @@
     --tg-dark-electric: #605E7A;
     --tg-pink: #F84D55;
     --tg-red: #F76766;
-    --tg-orange: #F26F3B;
+    --tg-orange: pink;
     --tg-yellow: #F1F026;
     --tg-yellow-two: #F5A623;
     --tg-yellow-three: #ECB321;
